@@ -33,4 +33,4 @@ jobs:
           name: Push application Docker image
           command: |
             docker login --username ${DOCKER_USER} --password ${DOCKER_PASSWORD}
-            docker push
+            docker push idubrov/rust-stm32

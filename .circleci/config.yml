@@ -24,7 +24,7 @@ jobs:
           name: Save Docker image layer cache
           command: |
             mkdir -p /caches
-            docker save -o /caches/app.tar app
+            docker save -o /caches/app.tar idubrov/rust-stm32
       - save_cache:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
@@ -32,4 +32,5 @@ jobs:
       - deploy:
           name: Push application Docker image
           command: |
+            docker login --username ${DOCKER_USER} --password ${DOCKER_PASSWORD}
             docker push

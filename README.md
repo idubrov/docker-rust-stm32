@@ -10,3 +10,4 @@ Includes:
  * [xargo](https://github.com/japaric/xargo)
  * [rust-clippy](https://github.com/rust-lang-nursery/rust-clippy)
  * [kcov](https://github.com/SimonKagstrom/kcov)
+ * [cargo-kcov](https://github.com/kennytm/cargo-kcov)

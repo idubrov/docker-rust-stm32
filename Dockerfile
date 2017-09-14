@@ -29,6 +29,7 @@ RUN set -eux; \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
     cargo install xargo; \
     cargo install clippy --vers 0.0.160; \
+    cargo install cargo-kcov; \
     rustup component add rust-src; \
     rustup --version; \
     cargo --version; \

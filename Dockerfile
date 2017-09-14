@@ -4,7 +4,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 
-RUN apt-get update && apt-get install -y gcc-arm-none-eabi
+RUN apt-get update && apt-get install -y gcc-arm-none-eabi libcurl4-openssl-dev libelf-dev libdw-dev cmake binutils-dev libiberty-dev
 
 RUN set -eux; \
     cd /root; \

@@ -24,7 +24,7 @@ RUN set -eux; \
     echo "${rustupSha256} *rustup-init" | sha256sum -c -; \
     chmod +x rustup-init; \
     ls ./rustup-init ; \
-    ./rustup-init -y --no-modify-path --default-toolchain nightly-2017-09-18; \
+    ./rustup-init -y --no-modify-path --default-toolchain nightly-2017-09-19; \
     rm rustup-init; \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
     cargo install xargo; \

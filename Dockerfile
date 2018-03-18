@@ -26,6 +26,7 @@ RUN set -eux; \
     ls ./rustup-init ; \
     ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-03-17; \
     rm rustup-init; \
+    rustup install stable; \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
     cargo install xargo; \
     cargo install clippy --vers 0.0.188; \

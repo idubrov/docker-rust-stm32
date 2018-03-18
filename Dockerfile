@@ -20,15 +20,15 @@ RUN set -eux; \
     rm -rf kcov-master; \
     url="https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init"; \
     wget "$url"; \
-    rustupSha256='f5833a64fd549971be80fa42cffc6c5e7f51c4f443cd46e90e4c17919c24481f'; \
+    rustupSha256='c9837990bce0faab4f6f52604311a19bb8d2cde989bea6a7b605c8e526db6f02'; \
     echo "${rustupSha256} *rustup-init" | sha256sum -c -; \
     chmod +x rustup-init; \
     ls ./rustup-init ; \
-    ./rustup-init -y --no-modify-path --default-toolchain nightly-2017-09-26; \
+    ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-03-17; \
     rm rustup-init; \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
     cargo install xargo; \
-    cargo install clippy --vers 0.0.164; \
+    cargo install clippy --vers 0.0.188; \
     cargo install cargo-kcov; \
     rustup component add rust-src; \
     rustup --version; \

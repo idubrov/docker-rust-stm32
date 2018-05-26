@@ -24,12 +24,12 @@ RUN set -eux; \
     echo "${rustupSha256} *rustup-init" | sha256sum -c -; \
     chmod +x rustup-init; \
     ls ./rustup-init ; \
-    ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-03-17; \
+    ./rustup-init -y --no-modify-path --default-toolchain nightly-2018-05-21; \
     rm rustup-init; \
     rustup install stable; \
     chmod -R a+w $RUSTUP_HOME $CARGO_HOME; \
     cargo install xargo; \
-    cargo install clippy --vers 0.0.188; \
+    cargo install clippy --vers 0.0.203; \
     cargo install cargo-kcov; \
     rustup component add rust-src; \
     rustup --version; \
